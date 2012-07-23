@@ -287,6 +287,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="b2m-rg-50y" kind="push" id="EQe-tb-CDE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -297,7 +300,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1639" y="-427"/>
+            <point key="canvasLocation" x="1641" y="-447"/>
         </scene>
         <!--Happiness View Controller - Diagnosis-->
         <scene sceneID="g2r-9c-OOs">
@@ -324,8 +327,40 @@
             </objects>
             <point key="canvasLocation" x="1699" y="-608"/>
         </scene>
+        <!--Dr Pill Website View Controller - Dr. Pill's Website-->
+        <scene sceneID="INr-R6-cR2">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CY9-WA-riN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="b2m-rg-50y" customClass="DrPillWebsiteViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eGY-eW-bHw">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="hxF-Dq-qmz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dr. Pill's Website" id="qR5-1v-D6I"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="hxF-Dq-qmz" id="yPz-cs-euk"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2232" y="-447"/>
+        </scene>
     </scenes>
     <classes>
+        <class className="DrPillWebsiteViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrPillWebsiteViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
         <class className="FaceView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FaceView.h"/>
             <relationships>
@@ -336,6 +371,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HappinessViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="faceView" candidateClass="FaceView"/>
+                <relationship kind="outlet" name="toolbar" candidateClass="UIToolbar"/>
             </relationships>
         </class>
         <class className="PsychologistViewController" superclassName="UIViewController">
